@@ -2,7 +2,7 @@
 
 UCLA CS97 Assignment 6 <br/>
 
-This script generates a directed acyclic graph (DAG) based off the commits of a git repository. Each commit can be thought of as a vertice. <br/>
+This script generates a directed acyclic graph (DAG) based off the commits of a git repository. Each commit is treated as a vertex. <br/>
 
 Tasks in this script <br/>
 1: Discover the .git directory  <br/>
