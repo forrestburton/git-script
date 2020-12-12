@@ -4,7 +4,7 @@ UCLA CS97 Assignment 6 <br/>
 
 This script generates a directed acyclic graph (DAG) based off the commits of a git repository. Each commit is treated as a vertex. <br/>
 
-Script implements bread-first search, depth-first search, recursion, as well as a topological sorting algorithm
+Script implements bread-first search, recursion, as well as a topological sorting algorithm using depth-first search
 
 Tasks in this script <br/>
 1: Discover the .git directory  <br/>
