@@ -15,7 +15,7 @@ class CommitNode:
     self.commit_hash = commit_hash
     self.parents = set()
     self.children = set()
-    self.visited = 0  #For depth-first search. 0 will represent unvisted, 1 represents temp mark, 2 represents visited
+    self.visited = 0  #0 will represent unvisted, 1 represents temp mark, 2 represents visited
 
 #2 helper function
 def grab_branch_names(target_dir):
@@ -26,7 +26,7 @@ def grab_branch_names(target_dir):
       if os.path.isfile(target): #directory or file?
           branches.append(target) #file
       else:
-          branches = branches + grab_branch_names(target_dir) #recursively search through directory
+          branches = branches + grab_branch_names(target) #recursively search through directory
     return branches
 
 #3 helper function
@@ -159,10 +159,10 @@ def topo_order_commits():
       print(node) 
     elif (i < ordered_length - 1 and (ordered_nodes[i + 1].commit_hash not in ordered_nodes[i].parents)): #sticky end?
       is_sticky = True
-      print(node)
       sticky_end = ""
       for parent in ordered_nodes[i].parents: #print parents 
         sticky_end += parent[:-1] + " "
+      print(node)
       print(sticky_end[:-1] + "=\n")
     else: #not an edge case
       print(node)
